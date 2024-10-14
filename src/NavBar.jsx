@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faInfoCircle, faGavel, faUsers, faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
-import './Navbar.css';
+import './NavBar.css';
 
 const Navbar = () => {
   return (
