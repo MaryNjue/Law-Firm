@@ -1,5 +1,6 @@
 import Navbar from './NavBar';
 import HeroSection from './HeroSection';
+import Services from './Services';
 import './App.css'; 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <HeroSection />
+      <Services/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .hero-section {
     height: 100vh;
-    background-image: url('/src/assets/law2.jpg'); 
+    background-image: url('/src/assets/law3.jpg'); 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -32,7 +32,7 @@
   }
   
   .btn-primary {
-    background-color: #f0a500;
+    background-color: red;
     color: white;
     border: none;
     padding: 15px 30px;

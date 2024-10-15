@@ -1,86 +1,144 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #293bfd;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo h2 {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-family: "Cinzel", serif;
+}
+
+.law-icon {
+  color: #f0a500;
+  font-size: 32px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li {
+  margin-right: 30px;
+  text-align: center;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.nav-icon {
+  color: white;
+  font-size: 18px;
+}
+
+.navbar-contact .btn-contact {
+  background-color: #f0a500;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.navbar-contact .btn-contact:hover {
+  background-color: #d48d00;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 771px) {
+  .navbar {
+    flex-direction: column;
     align-items: center;
-    background-color: #161D6F;
-    padding: 1rem;
   }
-  
+
   .navbar-logo {
-    display: flex;
-    align-items: center;
+    margin-bottom: 1rem;
   }
-  
-  .navbar-logo h2 {
-    color: white;
-    margin-left: 10px;
-    font-size: 1.3rem;
-    font-family: "Cinzel", serif;
-  }
-  
-  .law-icon {
-    color: #f0a500;
-    font-size: 32px;
-  }
-  
+
   .navbar-links {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .navbar-links li {
-    margin-right: 30px;
+    display: none;
+    flex-direction: column;
     text-align: center;
   }
-  
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-contact {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1rem;
+  }
+
   .navbar-links a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-top: 5px;
-    font-weight: bold;
-  }
-  
-  .nav-icon {
-    color: white;
-    font-size: 18px;
-  }
-  
-  .navbar-contact .btn-contact {
-    background-color: #f0a500;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
     font-size: 14px;
-    border-radius: 5px;
   }
-  
-  .navbar-contact .btn-contact:hover {
-    background-color: #d48d00;
+
+  .navbar-contact .btn-contact {
+    font-size: 12px;
+    padding: 8px 12px;
   }
-  @media (max-width: 771px) {
-    .navbar {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }}
-    @media (max-width: 375px) {
-        .navbar {
-          padding: 10px; /* Adjust padding for small screens */
-        }
-      
-        .navbar-logo h2 {
-          font-size: 16px; /* Even smaller font size for very small screens */
-        }
-      
-        .navbar-links a {
-          font-size: 12px; /* Make the nav links smaller */
-        }
-      
-        .navbar-contact .btn-contact {
-          font-size: 10px; 
-          padding: 6px 10px; 
-        }}
-  
+}
